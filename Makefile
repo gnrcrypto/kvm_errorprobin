@@ -37,7 +37,7 @@ clean:
 	rm -f kvm_prober kvm_pwn exploit
 	rm /bin/kvm_prober
 	rm /bin/kvm_pwn
-  rm /bin/exploit
+	rm /bin/exploit
 
 install: driver
 	sudo rmmod kvm_probe_drv 2>/dev/null || true
@@ -45,7 +45,7 @@ install: driver
 	@echo "Module loaded. Device: /dev/kvm_probe_dev"
 	sudo cp kvm_prober /bin
 	sudo cp kvm_pwn /bin
-  sudo cp exploit /bin
+	sudo cp exploit /bin
 
 unload:
 	sudo rmmod kvm_probe_drv
